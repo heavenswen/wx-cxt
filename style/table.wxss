@@ -1,0 +1,86 @@
+/*table-title*/
+
+/*默认表格*/
+
+.table{
+  display: table;
+  width: 100%;
+ 
+}
+
+.table-content{
+  border: 1px solid #ccc;
+  border-top:0 none;
+
+}
+.table-title {
+  position: relative;
+  display:block;
+  width: 100%;
+  padding: 20rpx;
+  text-align: center;
+}
+
+.table-body {
+  /*tbody*/
+  display: table-row-group;
+  font-size: 28rpx;
+}
+
+.tr {
+  width: 100%;
+  display: table-row;
+  border-top: 1px solid #ccc;
+}
+
+.tr:not(:nth-of-type(0)) {
+  border-top: 1px solid #ccc;
+}
+
+.td, .th {
+  border-top: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 30rpx;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.table .th {
+  position: relative;
+  background: #f1f1f1;
+  white-space: nowrap;
+  z-index: 1;
+}
+.table .td{
+  background: #fff;
+}
+.td:not(:last-of-type), .th:not(:last-of-type) {
+  border-right: 1px solid #ccc;
+}
+.table-title picker{
+  position: absolute;
+  top:20rpx;
+  right: 0;
+  display: inline-block;
+} 
+/*fixed*/
+.table-content{
+  position: relative;
+}
+.table-fixed-cloumn{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.table-fixed-cloumn .th,
+.table-fixed-cloumn .td{
+  opacity: 0;
+}
+.table-fixed-cloumn .th:nth-of-type(1),
+.table-fixed-cloumn .td:nth-of-type(1){
+  opacity: 1;
+}

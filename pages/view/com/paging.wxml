@@ -1,0 +1,28 @@
+
+<!--tb 分页 bindtap=tablePaging tb.pageAll[分组] tb.index 当前分组  -->
+<template name="paging">
+  <view class="paging">
+    <!--<button bindtap="tablePaging" disabled="{{1==tb.index}}" data-page="prev">《</button>-->
+    <button bindtap="tablePaging" disabled="{{1==tb.index}}" data-page="1">1</button>
+    <block wx:for="{{[-1,0,1]}}" wx:for-item="i" wx:for-index="k">
+      <block wx:if="{{tb.index+1 < tb.pageAll[tb.pageAll.length-1]}}">
+        <button wx:if="{{tb.pageAll[tb.index+i] >1 && k == 0&& tb.index != 2 }}" bindtap="tablePaging" disabled="{{1==tb.index}}" data-page="prev"> ...</button>
+        <button wx:if="{{tb.pageAll[tb.index+i] != '1'&&tb.pageAll[tb.pageAll.length-1] > tb.pageAll[tb.index+i] }}" bindtap="tablePaging" disabled="{{(tb.pageAll[tb.index+i])==tb.index}}" data-page="{{tb.pageAll[tb.index+i]}}">
+          {{tb.pageAll[tb.index+i]}}
+        </button>
+      </block>
+      <block wx:else>
+        <!--  tb.pageAll[tb.pageAll.length-4]  4 从三为开始 -->
+        <button wx:if="{{tb.pageAll[(tb.pageAll.length-2)+i]>1 && k == 0&& tb.pageAll.length > 4 }}"bindtap="tablePaging" disabled="{{1==tb.index}}" data-page="prev">...</button>
+        <button bindtap="tablePaging" wx:if="{{ tb.pageAll[(tb.pageAll.length-2)+i] > 1 &&tb.pageAll[tb.pageAll.length-1] >  tb.pageAll[(tb.pageAll.length-2)+i]}}" disabled="{{tb.pageAll[(tb.pageAll.length-2)+i]== tb.index}}" data-page="{{tb.pageAll[(tb.pageAll.length-2)+i]}}">
+          {{tb.pageAll[(tb.pageAll.length-2)+i]}}
+        </button>
+      </block>
+
+      <!-- k = 2 ;2 is arrar.k.last  -->
+      <button wx:if="{{tb.pageAll[tb.index+2]&&k == 2&&tb.index < tb.pageAll[tb.pageAll.length-4]}}" bindtap="tablePaging" disabled="{{tb.pageAll.length==tb.index}}" data-page="next">...</button>
+    </block>
+    <button bindtap="tablePaging" disabled="{{tb.index == tb.pageAll[tb.pageAll.length-1]}}" data-page="{{tb.pageAll[tb.pageAll.length-1]}}">{{tb.pageAll[tb.pageAll.length-1]}}</button>
+    <!--<button bindtap="tablePaging" disabled="{{tb.pageAll.length==tb.index}}" data-page="next">》</button>-->
+  </view>
+</template>

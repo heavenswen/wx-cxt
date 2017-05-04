@@ -1,0 +1,54 @@
+
+<!--pages/view/tab/tab.wxml-->
+<view class="container">
+  <view class="tab">
+    <text class="text-center title">横向tab</text>
+    <view class="flex tab-nav">
+      <view class="flex-1">
+        导航1
+      </view>
+      <view class="flex-1">
+        导航2
+      </view>
+      <view class="flex-1">
+        导航3
+      </view>
+    </view>
+    <view class="tab-body">
+      <view class="tab-con">
+        内容1
+      </view>
+      <view class="tab-con">
+        内容1
+      </view>
+      <view class="tab-con">
+        内容1
+      </view>
+    </view>
+  </view>
+  <view class="tab">
+    <text class="text-center title">竖向tab</text>
+    <view class="flex tab-nav">
+      <view class="flex-1">
+        导航1
+      </view>
+      <view class="flex-1">
+        导航2
+      </view>
+      <view class="flex-1">
+        导航3
+      </view>
+    </view>
+    <view class="tab-body">
+      <view class="tab-con">
+        内容1
+      </view>
+      <view class="tab-con">
+        内容1
+      </view>
+      <view class="tab-con">
+        内容1
+      </view>
+    </view>
+  </view>
+</view>

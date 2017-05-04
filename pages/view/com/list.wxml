@@ -1,0 +1,20 @@
+<!--二级列表 lists 一级 show：是否显示下拉 list：子集 title：标题 url：链接 -->
+<!--require("addClass") -->
+<template name="list">
+  
+    <view class="list" wx:if="{{lists}}">
+        <block   wx:for='{{lists}}' wx:key="index" wx:for-item="item">
+            <view   class='list-item {{item.show?"active":""}}' >
+                <view class="list-child" id="{{index}}"  bindtap="addClass" >
+                    {{item.title}}
+                </view>
+                <view class="list-con" wx:for="{{item.list}}" wx:key="k" wx:for-item="v">
+                    <navigator  class="item" url="{{v.url}}">{{v.title}}</navigator>
+                </view>
+            </view>
+        </block>
+    </view>
+
+
+
+</template>

@@ -1,0 +1,74 @@
+/* pages/view/input/input.wxss */
+
+.input-box.fixed {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 99;
+  border-top:1px solid #ccc;
+}
+/*输入栏*/
+.input-input{
+    padding: 20rpx;
+    align-items:center;
+}
+
+
+/*状态栏*/
+.input-status{
+    width: 60rpx;
+    height: 60rpx;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.input-status .img{
+    width: 100%;
+    height: 100%;
+}
+/*文字输入框*/
+.input-box .input-text{
+    position: relative;
+    padding: 0 30rpx;
+}
+.input-box .input-text::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0;
+    width: 90%;
+    height: 1px;
+    background: #ccc;
+}
+/*提交*/
+.input-btn{
+    border-radius: 3px;
+    height: 60rpx;
+    line-height: 60rpx;
+}
+/*菜单*/
+.input-nav{
+    height: 0;
+    border-top:1px solid #ccc;
+    width: 100%;
+    flex-wrap:wrap;
+    overflow: hidden;
+    transition: all .3s;
+}
+.input-nav.active{
+     height: auto;
+}
+.input-nav-item {
+    width: 25%;
+    padding: 40rpx;
+    display: inline-flex;
+
+}
+.input-nav-item image{
+  width: 100%;
+  border:1px solid #ccc;
+  border-radius: 10px;
+}

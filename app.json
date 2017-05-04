@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/view/view",
+    "pages/about/about",
+    "pages/view/input/input",
+    "pages/view/phone/phone",
+    "pages/view/tip/tip",
+    "pages/index/index",
+    "pages/view/table/table",
+    "pages/logs/logs",
+    "pages/view/login/login"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ccc",
+    "navigationBarTitleText": "APP",
+    "navigationBarTextStyle": "#333",
+    "enablePullDownRefresh":"true",
+    "backgroundTextStyle":"dark"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "iconPath": "img/icon_component.png",
+        "selectedIconPath": "img/icon_component_HL.png",
+        "pagePath": "pages/about/about",
+        "text": "概况浏览"
+      },
+      {
+        "iconPath": "img/icon_API.png",
+        "selectedIconPath": "img/icon_API_HL.png",
+        "pagePath": "pages/view/view",
+        "text": "号码设置"
+      },
+      {
+        "iconPath": "img/icon_API.png",
+        "selectedIconPath": "img/icon_API_HL.png",
+        "pagePath": "pages/view/view",
+        "text": "帐号充值"
+      }
+    
+  ],
+  "position": "bottom"
+},
+"debug": true
+}

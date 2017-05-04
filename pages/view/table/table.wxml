@@ -1,0 +1,6 @@
+<import src="../com/table.wxml" />
+
+<!--pages/view/table/table.wxml-->
+<view class="container">
+      <template  wx:for="{{table}}" wx:for-index="name" wx:for-item="tb" is="table" data="{{tb}}" />
+</view>

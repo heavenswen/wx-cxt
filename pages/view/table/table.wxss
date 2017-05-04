@@ -1,0 +1,46 @@
+/* pages/view/table/table.wxss */
+/*样式*/
+page {
+  height: 100%;
+}
+
+[data-order] {
+  position: relative;
+}
+
+[data-order]:after, [data-order]:before {
+  position: absolute;
+  content: "";
+  right: 10rpx;
+  top: 0;
+  bottom: 0;
+  width: 0rpx;
+  height: 0rpx;
+  margin: auto;
+  border-width: 10rpx;
+  border-color: transparent;
+  border-style: solid;
+}
+
+[data-order]:after {
+  border-bottom-color: #999;
+  transform: translateY(-12rpx);
+}
+
+[data-order]:before {
+  border-top-color: #999;
+  transform: translateY(12rpx);
+}
+
+[data-order='1']:after {
+  border-bottom-color: green;
+}
+
+[data-order='2']::before {
+  border-top-color: red;
+}
+
+[data-order='1']:before, [data-order='2']:after {
+  display: none;
+}
+

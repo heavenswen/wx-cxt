@@ -1,0 +1,38 @@
+
+<!--pages/view/input/input.wxml-->
+<view class="container">
+</view>
+<!--input-->
+  <view class="input-box fixed">
+  <!--input status-->
+    <view class="flex input-input">
+      <view class="input-status" bindtap="inputNavShow">
+            <image class="img" mode="widthFix"  src="{{input.icons[input.type]}}"></image>
+      </view>
+      <block wx:if="{{input.type == 'auto'}}">
+        <button class="flex-1">长按录音</button>
+      </block>
+      <block wx:elif="{{input.type == 'video'}}">
+        <button class="flex-1">上传视频</button>
+      </block>
+      <block wx:elif="{{input.type == 'image'}}">
+        <button class="flex-1">选择图片</button>
+      </block>
+      <block wx:else>
+        <!--输入状态-->
+        <input class="input-text flex-1" />
+      </block>
+
+      <button class="input-btn" >        
+         发送
+      </button>
+    </view>
+
+    <!--input nanv-->
+    <view class="input-nav fiex {{input.navShow?'active':''}}">
+        <view class="input-nav-item " wx:for="{{input.icons}}" wx:for-item="icon" wx:for-index="type">
+            <image class="img" bindtap="inputSetType" data-type="{{type}}" mode="widthFix"  src="{{icon}}"></image>
+        </view>
+    </view>
+  
+  </view>

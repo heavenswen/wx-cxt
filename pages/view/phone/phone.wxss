@@ -1,0 +1,7 @@
+/* pages/view/phone/phone.wxss */
+.denger{
+    border-color:#f00;
+}
+.btn-yzm {
+    width: 200rpx;
+}

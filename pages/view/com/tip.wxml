@@ -1,0 +1,14 @@
+<!--tip view-->
+<!--tip:{color:颜色,type：icontype,class:添一个自定义class，content：“文字内容”}-->
+<!--iconShowHide 等待效果 ...-->
+
+<template name="tip">
+  <view class="view-tip {{tip.content?'active':''}} {{tip.class}}" bindtap="onTipHide">
+    <view class="animate">
+      <icon type="{{tip.type?tip.type:'info'}}" color="{{tip.color?tip.color:'#fff'}}"> </icon>
+    </view>
+    <view class="tip-con">
+      {{tip.content}}
+    </view>
+  </view>
+</template>

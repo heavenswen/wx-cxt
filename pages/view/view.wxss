@@ -1,0 +1,4 @@
+.tip{
+    padding: 30rpx;
+    background: #eee;
+}

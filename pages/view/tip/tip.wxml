@@ -1,0 +1,17 @@
+<import src="../com/tip.wxml" />
+<view class="container">
+  <button class="btn" data-content="弹出提示默认总是显示弹出提示默认总是显示弹出提示默认总是显示" bindtap="onTip">默认</button>
+  <button class="btn" data-time="3000" data-color="#fff" data-type="info" data-content="弹出提示3s" bindtap="onTip">3s</button>
+  <button class="btn" data-color="#3ff" data-type="success" data-content="success" bindtap="onTip">icon成功</button>
+  <button class="btn" data-type="success_no_circle" data-content="success_no_circle" bindtap="onTip">icon打勾</button>
+  <button class="btn" data-type="warn" data-content="success" bindtap="onTip">icon警告</button>
+  <button class="btn" data-type="waiting" data-class="iconShowHIde"  data-content="waiting" bindtap="onTip">icon时间</button>
+  <button class="btn" data-type="cancel" data-content="cancel" bindtap="onTip">icon取消</button>
+  <button class="btn" data-type="download" data-content="download" bindtap="onTip">icon下载</button>
+  <button class="btn" data-type="search" data-content="search" bindtap="onTip">icon搜索</button>
+  <button class="btn" data-type="clear" data-content="clear" bindtap="onTip">icon清除</button>
+  <button class="btn" data-content="关闭提示" bindtap="onTipHide">关闭</button>
+</view>
+
+<!--tip view-->
+<template is="tip" data="{{tip}}" ></template> 

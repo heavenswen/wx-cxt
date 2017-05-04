@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="container">
+<text class="user-motto">{{motto}}</text>
+  
+  <block wx:if="{{user}}">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userImg}}" background-size="cover"></image>
+  </view>
+  <view wx:for='{{user}}' wx:for-index='k' wx:for-item = 'v'>
+    <text class='li' >
+      {{v.title}}:{{v.value}}
+    </text>
+  </view>
+  </block>
+  <view wx:elif="{{info}}">{{info}}</view>
+</view>
+

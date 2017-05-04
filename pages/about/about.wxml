@@ -1,0 +1,48 @@
+<view class='top container'>
+  <text class='title'>传信通</text>
+  <text>
+    传信通是一款基于移动手机端的营销工具。通过人与人之间的日常手机通话行为产生手机主屏弹屏广告与挂断自动彩信推送的方式，为推广主实现品牌曝光与营销转化。
+  </text>
+</view>
+<view class='container'>
+    <text class='title'>
+        数据统计
+    </text>
+    <view class='list-inline'>
+        <view class='inline'>
+            <text class="block text-center">{{total}}</text>
+            <text >总发送条数</text>
+        </view>
+
+        <view class='inline'>
+            <text class="block text-center">{{yester}}</text>
+            <text >总发送条数</text>
+        </view>
+
+        <view class='inline'>
+            <text class="block text-center">{{people}}</text>
+            <text >总发送条数</text>
+        </view>
+
+        <view class='inline'>
+            <text class="block text-center">{{yester}}</text>
+            <text >总发送条数</text>
+        </view>
+    </view>
+</view>
+<view class='container'>
+<text class='title'>
+    使用说明
+</text>
+    <view class='ol'>
+        <view class='li'>
+            1. 号码设置：添加分组 → 添加或批量添加代言人 → 设定分组
+        </view>
+        <view class='li'>
+            1. 号码设置：添加分组 → 添加或批量添加代言人 → 设定分组
+        </view>
+        <view class='li'>
+            1. 号码设置：添加分组 → 添加或批量添加代言人 → 设定分组
+        </view>
+    </view>
+</view>

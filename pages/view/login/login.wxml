@@ -1,0 +1,7 @@
+<!--login-->
+<import  src="../com/login.wxml" />
+<view class="con-md">
+    
+    <template is="login"  data ="{{login}}" />    
+
+</view>

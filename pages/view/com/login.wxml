@@ -1,0 +1,16 @@
+<!--login 用户用户登录  -->
+<template name="login">
+    <view class="view-md">
+        <form bindsubmit="loginSub" >
+            <input type="text" name="user" class='input form-item' placeholder="请输入用户名"   />
+            <input type="text" name='pw' class='input form-item' password placeholder="请输入密码"   />
+            <checkbox-group class='form-item' bindchange = "rememberChacked" >
+                <label >
+                    <checkbox value="remember"  checked="{{login.remember}}" />记住密码
+                </label>
+                <navigator class="pull-right" url="{{login.forget}}">忘记密码？</navigator>
+            </checkbox-group>
+        <button formType="submit" >登录</button>
+        </form>
+    </view>
+</template>

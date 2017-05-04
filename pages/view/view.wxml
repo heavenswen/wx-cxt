@@ -1,0 +1,6 @@
+<import src="com/list.wxml"/>
+<!--ss  -->
+<view >
+   <template is="list" data="{{lists}}"/> 
+   <view class="tip text-center">点击其他栏自动收起</view>
+</view>

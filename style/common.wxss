@@ -1,0 +1,181 @@
+/*common*/
+
+page {
+  font-size: 32rpx;
+}
+
+scroll-view, view, image {
+  padding: 0;
+}
+
+scroll-view, view, button, input, textarea, icon, swiper, swiper-item, label,
+navigator {
+  font-size: 32rpx;
+  box-sizing: border-box;
+}
+
+input, button {
+  box-sizing: content-box;
+}
+
+/*float*/
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+/*图片盒子*/
+
+.img {
+  max-width: 100%;
+}
+
+.img-box {
+  position: relative;
+}
+
+.img-box .img {
+  /*设置一个高度 居中图片*/
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/*text*/
+.title{
+  display: block;
+  font-size: 36rpx;
+}
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-break {
+  /*字母换行*/
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+/*form*/
+
+.btn {
+  color: #333;
+  line-height: 3.5;
+}
+
+.btn {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 14px;
+  padding-right: 14px;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+  color: #000;
+}
+
+.btn::after {
+  content: " ";
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  border-radius: 10px;
+}
+
+.input, .checkbox, .select {
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 2.8rem;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+input::disabled, button::disabled, .btn::disabled, .disabled, button[disabled] {
+  opacity: 0.7;
+}
+
+.disabled {
+  /*不可用*/
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/*容器*/
+
+.container {
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+
+.view-md {
+  width: 600rpx;
+  margin: auto;
+}
+
+.p view {
+  display: inline;
+}
+/*-列表*/
+@import "list.wxss";
+
+.form-item {
+  margin-bottom: 30rpx;
+}
+
+/*flex*/
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex-grow: 1;
+}
+.flex-inline{
+  display: inline-flex;
+}
+
+/*tip*/
+@import "tip.wxss";
+
+/*table*/
+@import "table.wxss";
+
+/*paging 分页*/
+
+.paging {
+  margin: 30rpx;
+  text-align: center;
+}
+
+.paging button, .paging view {
+  font-size: 28rpx;
+  display: inline-block;
+}

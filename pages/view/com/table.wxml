@@ -1,0 +1,65 @@
+<import src="paging.wxml" />
+
+<!--表格，分页，排序-->
+<template name="table">
+
+  <!--标题-->
+  <view class="table-title" wx:if="{{tb.title}}">
+    {{tb.title}}
+
+    <!--分页-->
+    <picker bindchange="tablePage" value='{{tb.pageIndex}}' range="{{tb.page}}">
+      <view class="picker">
+        显示：{{tb.page[tb.pageIndex]}}条
+      </view>
+    </picker>
+  </view>
+  <view class="table-content">
+    <!--fixed-->
+    <view wx:if="{{tb.fixedCloumn}}" class="table table-fixed-cloumn">
+      <view class="tr table-head">
+        <view wx:for="{{tb.thead}}" wx:for-item="thead" class="th {{thead.status?thead.status:''}}" data-order="{{thead.order}}" data-name="{{thead.name}}" data-table="{{tb.id}}" bindtap="onOrder" >{{thead.value}}
+        </view>
+      </view>
+      <view class="table-body">
+        <!--条数循环-->
+        <block wx:for="{{tb.tbody}}" wx:for-index="n" wx:for-item="tr">
+          <view class="tr" wx:if="{{!tb.index||n < (tb.page[tb.pageIndex]*tb.index) && n>=tb.page[tb.pageIndex]*(tb.index-1)}}">
+
+            <!--数据-->
+            <view class="td" wx:for="{{tr}}" wx:for-item="td">{{td?td:""}}</view>
+           
+          </view>
+        </block>
+      </view>
+
+      <!--tbody end-->
+    </view>
+    <scroll-view scroll-x="true" style="width:100%">
+
+      <!--tb content-->
+      <view class="table">
+        <view class="tr table-head">
+          <view wx:for="{{tb.thead}}" wx:for-item="thead" class="th {{thead.status?thead.status:''}}" data-order="{{thead.order}}" data-name="{{thead.name}}" data-table="{{tb.id}}" bindtap="onOrder">{{thead.value}}
+          </view>
+        </view>
+        <view class="table-body">
+
+          <!--条数循环-->
+          <block wx:for="{{tb.tbody}}" wx:for-index="n" wx:for-item="tr">
+            <view class="tr" wx:if="{{!tb.index||n < (tb.page[tb.pageIndex]*tb.index) && n>=tb.page[tb.pageIndex]*(tb.index-1)}}">
+
+              <!--数据-->
+              <view class="td" wx:for="{{tr}}" wx:for-item="td">{{td?td:""}}</view>
+            </view>
+          </block>
+        </view>
+
+        <!--tbody end-->
+      </view>
+
+      <!--tb content end-->
+    </scroll-view>
+  </view>
+  <template wx:if="{{tb.page}}" is="paging" data="{{tb}}"></template>
+</template>

@@ -1,0 +1,16 @@
+<view class="container">
+    <form bindsubmit="formSub">
+        <view class="form-item">
+            <input class="input  {{phone?'':'denger'}}" bindinput="input" name="phone" data-reg="phone" type="text" placeholder="请输入手机号码" />
+        </view>
+        <view class="form-item flex">
+            <input maxlength="5" bindinput="input" class="flex-1 input yzm {{mail?'':'disabled'}} {{input?'':'denger'}}" type="text" placeholder="验证码输入"  />
+            
+            <button bindtap="getyzm" type="default" class="btn-yzm {{phone==true&&!yzmNo?'':'disabled'}}" >{{yzmNo?yzmNo:yzm}}</button>
+        
+        </view>
+        <view>
+            <button  class="{{input!=true&&phone!=true?'disabled':''}}" form-type="submit" type="sub">下一步</button>
+        </view>
+    </form>
+</view>
